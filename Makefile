@@ -32,7 +32,9 @@ TARGET=trig
 # GCC compiling & linking flags
 CFLAGS=-g -std=gnu99 -Wall -Werror
 CFLAGS += -DVERSION=$(VERSION) -DREVISION=$(REVISION)
-
+CFLAGS  = -std=gnu11 -Wall ## -Werror
+CFLAGS += -I/opt/redpitaya/include -D$(MODEL)
+LDFLAGS = -L/opt/redpitaya/lib
 # Red Pitaya common SW directory
 SHARED=../../shared/
 
